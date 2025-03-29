@@ -9,6 +9,9 @@ public class IntegerStack {
         this.depth = 0;
         stack = new int[depth];
     }
+    public int size(){
+        return depth;
+    }
 
     // Get the value of the top element without removal
     public int peek()

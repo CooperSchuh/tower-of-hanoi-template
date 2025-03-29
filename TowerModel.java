@@ -47,7 +47,10 @@ public class TowerModel {
     public void move(int source, int destination)
     {
         System.out.println("Move #" + ++moveCounter + " from " + source + " to " + destination);
-        // TODO!!
+        int temp = towers[source].peek();
+        towers[source].pop();
+        towers[destination].push(temp);
+
     }
 
     // Helper method to nicely print the current model state.
@@ -85,4 +88,9 @@ public class TowerModel {
     {
         return towerHeight;
     }
+    public int size(int n){
+        return towers[n].size();
+    }
+
+    
 }
